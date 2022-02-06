@@ -63,15 +63,16 @@ function quickSort_c(arr, left, right) {
       divideIndex = partition(arr, left, right);
 
       // 数组中小于arr[divideIndex]的部分(索引left到divideIndex-1)再次使用quickSort排序；
-      quickSort(arr, left, divideIndex - 1);
+      quickSort_c(arr, left, divideIndex - 1);
 
       // 数组中大于arr[divideIndex]的部分(索引divideIndex+1到right)再次使用quickSort排序；
-      quickSort(arr, divideIndex + 1, right);
+      quickSort_c(arr, divideIndex + 1, right);
   }
   // 递归执行直到不满足left<right;返回本身；
-  return ;
+  return
 }
 
 function quickSort(arr){
-  return quickSort_c(arr,0,arr.length-1)
+  quickSort_c(arr,0,arr.length-1);
+  return arr;
 }
