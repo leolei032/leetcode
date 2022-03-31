@@ -3,7 +3,7 @@
 https://note.youdao.com/yws/public/resource/edc188382225dc8985fa4a7cb97e3bbc/xmlnote/F436D29D6E334530B6B2BF11E7359F85/16498
 */
 // 前序遍历 当前节点---> 左子节点---> 右子节点
-// 中序遍历 当前节点---> 左子节点---> 右子节点
+// 中序遍历 左子节点---> 当前节点---> 右子节点
 // 后序遍历 左子节点---> 右子节点---> 当前节点
 
 
@@ -23,7 +23,7 @@ var preorderTraversal = function(root) {
   return res;
 };
 
-// 前序遍历 迭代写法
+// 前序遍历 循环
 
 var preorderTraversal = function(root) {
 let res = new Array();
