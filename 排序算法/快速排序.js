@@ -34,7 +34,7 @@ function partition(arr, left, right) {
           i++;
       }
   }
-  swap(arr, i, right );
+  swap(arr, i, right );// 注意这个交换
 
   // 返回index作为拆分子数组的分界线；
   return i

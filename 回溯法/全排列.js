@@ -12,22 +12,22 @@ function permute(nums){
   if(len ===0) return [];
   let ans = [];
 
-  function backup(cache,hashMap){
+  function backup(cache,map){
     // 满足条件
     if(cache.length === len) return ans.push(cache);
 
     for(let i = 0;i<nums.length;i++){
-      if(!hashMap[nums[i]]){
+      if(!map[nums[i]]){
         cache.push(nums[i]);
-        hashMap[nums[i]] = 1;
-        backup([...cache],hashMap);//注意，否则因为引用关系，每一个值会被改写
-        delete hashMap[nums[i]];
+        map[nums[i]] = 1;
+        backup([...cache],map);//注意，否则因为引用关系，每一个值会被改写
+        delete map[nums[i]];
         cache.pop();
       }
     }
   }
 
-  backup(cache = [],hashMap = {},);
+  backup(cache = [],map = {},);
   return ans;
 }
 

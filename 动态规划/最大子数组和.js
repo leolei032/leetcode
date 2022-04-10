@@ -9,7 +9,7 @@
  */
 
  var maxSubArray =function (nums) {
-  let pre = 0;// i结尾最大值,加nums[i]的和跟nums[i] 比较。取较大值
+  let pre = 0;// i结尾最大值,加nums[i]的和跟nums[i] 比较。取较大值 滚动数组，可以用O(1)空间复杂度完成
   let max = nums[0]//  最大值
 
   for(let i = 0;i<nums.length;i++){
