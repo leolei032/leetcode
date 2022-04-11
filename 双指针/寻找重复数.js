@@ -17,7 +17,7 @@ var findDuplicate = function(nums) {
   while (l <= r) {
       let mid = (l + r) >> 1;
       let cnt = 0;
-      // 这个循环的意思：查看cnt(nums[n-1]) --> 也ik就是整个数组中小于mid的个数，跟mid做对比。 如果大于，mid说明 mid之后还有比mid小的此时左指针需要右移动。否则，右指针需要左移，
+      // 这个循环的意思：查看cnt(nums[n-1]) --> 也就是整个数组中小于mid的个数，跟mid做对比。 如果大于，mid说明 mid之后还有比mid小的此时左指针需要右移动。否则，右指针需要左移，
       // 二分查找停止德标志是 l === right;
       for (let i = 0; i < n; ++i) {
           if(nums[i] <= mid){
